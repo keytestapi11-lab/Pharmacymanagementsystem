@@ -1,9 +1,6 @@
 {
     "build": {
-        "builder": "NIXPACKS",
-        "nixpacksConfig": {
-            "phpRootDir": "PHARMACY"
-        }
+        "builder": "NIXPACKS"
     },
     "deploy": {
         "startCommand": "php -S 0.0.0.0:$PORT -t PHARMACY"
