@@ -14,7 +14,11 @@
 	}
 	
 	function filtertable($query)
-	{	$conn = mysqli_connect("localhost", "root", "", "pharmacy");
+	{	$host = getenv("MYSQL_HOST") ?: "localhost";
+		$user = getenv("MYSQL_USER") ?: "root";
+		$pass = getenv("MYSQL_PASSWORD") ?: "";
+		$db   = getenv("MYSQL_DATABASE") ?: "pharmacy";
+	$conn = mysqli_connect($host, $user, $pass, $db);
 		$filter_result=mysqli_query($conn,$query);
 		return $filter_result;
 	}
