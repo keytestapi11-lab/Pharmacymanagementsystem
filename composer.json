@@ -1,0 +1,7 @@
+{
+    "name": "pharmacy/pharmacy-management",
+    "description": "Pharmacy Management System",
+    "require": {
+        "php": ">=7.0"
+    }
+}
